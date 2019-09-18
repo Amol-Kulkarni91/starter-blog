@@ -1,8 +1,8 @@
-title: Dattabhilekha
+title: Datta abhilekha
 baseline: You
-description: 'A ready to use static blog, powered by Cecil and Hyde.'
+description: A generic blog on everything related to Data Science
 baseurl: /
-canonicalurl: true
+canonicalurl: false
 theme: hyde
 date:
   format: j F Y
