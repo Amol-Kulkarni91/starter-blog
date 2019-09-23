@@ -5,6 +5,6 @@ image: /images/hello_world.jpeg
 tags:
   - Cecil
   - SSG
-draft: true
+draft: false
 ---
 Hello
