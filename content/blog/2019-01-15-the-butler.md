@@ -5,7 +5,7 @@ image: /images/hello_world.jpeg
 tags:
   - Cecil
   - SSG
-draft: true
+draft: false
 ---
 Hello 
 
@@ -14,7 +14,7 @@ import random
 import datetime
 ```
 
-```
+```python
 geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!.
 target = "Hello World!"
 ```
