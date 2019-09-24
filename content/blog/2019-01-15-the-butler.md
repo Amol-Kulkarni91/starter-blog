@@ -7,4 +7,12 @@ tags:
   - SSG
 draft: true
 ---
-Hello
+```
+import random 
+import datetime
+```
+
+```
+geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!.
+target = "Hello World!"
+```
