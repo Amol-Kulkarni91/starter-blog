@@ -11,22 +11,6 @@ For my first post, I decided to do something that every programer learns in any 
 
 Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. 
 
-```
-GA()
-   initialize population
-   find fitness of population
-   
-   while (termination criteria is reached) do
-      parent selection
-      crossover with probability pc
-      mutation with probability pm
-      decode and fitness calculation
-      survivor selection
-      find best
-   return best
-```
-
-
 ```python
 import random 
 import datetime
