@@ -5,8 +5,10 @@ image: /images/hello_world.jpeg
 tags:
   - Cecil
   - SSG
-draft: false
+draft: true
 ---
+
+
 ```
 import random 
 import datetime
