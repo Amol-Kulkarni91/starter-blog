@@ -25,6 +25,8 @@ GA()
       find best
    return best
 ```
+
+
 ```python
 import random 
 import datetime
@@ -76,7 +78,7 @@ while True:
     bestParent = child
 ```
 
-```output
+```
 PwYXVxqghGja	0	0:00:00.001003
 HwYXVxqghGja	1	0:00:00.001003
 HwYXVxqghlja	2	0:00:00.007858
