@@ -9,8 +9,22 @@ draft: false
 ---
 For my first post, I decided to do something that every programer learns in any of their programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!". Before we jump into coding; I will give a brief introduction to the genetic algorithm.
 
-Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions.
+Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. 
 
+```
+GA()
+   initialize population
+   find fitness of population
+   
+   while (termination criteria is reached) do
+      parent selection
+      crossover with probability pc
+      mutation with probability pm
+      decode and fitness calculation
+      survivor selection
+      find best
+   return best
+```
 ```python
 import random 
 import datetime
@@ -60,4 +74,20 @@ while True:
         break
     bestFitness = childFitness
     bestParent = child
+```
+
+```output
+PwYXVxqghGja	0	0:00:00.001003
+HwYXVxqghGja	1	0:00:00.001003
+HwYXVxqghlja	2	0:00:00.007858
+HwYXVxqghlj!	3	0:00:00.011940
+HwYXV qghlj!	4	0:00:00.024247
+HwYXo qghlj!	5	0:00:00.035484
+HwYXo qghld!	6	0:00:00.037479
+HwYXo qgrld!	7	0:00:00.040592
+HwYXo Wgrld!	8	0:00:00.045106
+HwlXo Wgrld!	9	0:00:00.057195
+HwlXo World!	10	0:00:00.075456
+Hwllo World!	11	0:00:00.079659
+Hello World!	12	0:00:00.145945
 ```
