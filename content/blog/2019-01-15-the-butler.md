@@ -11,15 +11,14 @@ For my first post, I decided to do something that every programer learns in thei
 
 ## What are Genetic Algorithms?
 
-Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. They were proposed by John Holland, his students and David E. Goldberg. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. The basic principle on which genetic algorithm works reflects the process of natural selection where the fittest individuals are selected from the population for reproduction.
+Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. They were proposed by John Holland, his students and David E. Goldberg. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. The basic principle on which genetic algorithm works reflects the process of natural selection.
 
 ![](/images/ga_1.jpg)
 
+The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
-## Basic Structure of Genetic Algorithm
 
-
-## Implementation in Python
+#### Genes 
 
 ```python
 import random 
@@ -31,6 +30,8 @@ geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!."
 target = "Hello World!"
 ```
 
+#### Initial Population
+
 ```python
 def generate_parent(length):
     genes = []
@@ -39,8 +40,20 @@ def generate_parent(length):
         genes.extend(random.sample(geneSet, sampleSize))
     return ''.join(genes)
 
+```
+
+#### Fitness Function
+
+```python
+
 def get_fitness(guess):
     return sum(1 for expected, actual in zip(target, guess) if expected == actual)
+```
+
+#### Mutation
+
+
+```python
 
 def mutate(parent):
     index = random.randrange(0, len(parent))
@@ -49,6 +62,10 @@ def mutate(parent):
     childGenes[index] = alternate if newGene == childGenes[index] else newGene
     return ''.join(childGenes)
 
+```
+
+
+```python
 def display(guess):
     timeDiff = datetime.datetime.now() - startTime
     fitness = get_fitness(guess)
