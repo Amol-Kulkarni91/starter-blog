@@ -28,7 +28,7 @@ geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!."
 target = "Hello World!"
 ```
 
-#### Initial Population
+#### Generate Parents
 
 ```python
 def generate_parent(length):
