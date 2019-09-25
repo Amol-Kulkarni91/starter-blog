@@ -86,7 +86,7 @@ while True:
     bestFitness = childFitness
     bestParent = child
 ```
-
+#### Result:
 ```output
 PwYXVxqghGja	0	0:00:00.001003
 HwYXVxqghGja	1	0:00:00.001003
