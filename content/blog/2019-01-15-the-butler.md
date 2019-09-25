@@ -17,8 +17,7 @@ Genetic algorithms are tools that are used to find good sometimes even optimal s
 
 The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
-
-#### Genes 
+#### Genes
 
 ```python
 import random 
@@ -37,7 +36,6 @@ def generate_parent(length):
         sampleSize = min(length - len(genes), len(geneSet))
         genes.extend(random.sample(geneSet, sampleSize))
     return ''.join(genes)
-
 ```
 
 #### Fitness Function
@@ -45,25 +43,30 @@ def generate_parent(length):
 The fitness function provides feedback to guide the algorithm towards a solution. In this case, the fitness value is the total number of letters in the same position as that of the target variable.
 
 ```python
-
 def get_fitness(guess):
     return sum(1 for expected, actual in zip(target, guess) if expected == actual)
 ```
 
 #### Mutation
 
+In certain new offspring formed, some of their genes can be subjected to a mutation with a low random probability. This implies that some of the bits in the bit string can be flipped. Mutation occurs to maintain diversity within the population and prevent premature convergence.
+
+The following implementation converts the parent string to ann array with `list(parent)`, then replaces 1 letter in the array with a randomly selected one from `geneSet` and finally recombines the result into a string with `''.join(childGenes)`
 
 ```python
-
 def mutate(parent):
     index = random.randrange(0, len(parent))
     childGenes = list(parent)
     newGene, alternate = random.sample(geneSet, 2)
     childGenes[index] = alternate if newGene == childGenes[index] else newGene
     return ''.join(childGenes)
-
 ```
 
+This implementation uses an alternate replacement if the randomly selected `newGene` is the same as the one it is supposed to replace, which can prevent a significant number of wasted guesses.
+
+#### Monitoring Progress
+
+It's important to monitor progress, so that the algorithm can be stopped if it gets stuck. Having a visual representation of the gene sequence, which may not be the literal gene sequence, is often critical to identifying what works and what does not so that the algorithm can be improved.
 
 ```python
 def display(guess):
@@ -71,6 +74,11 @@ def display(guess):
     fitness = get_fitness(guess)
     print("{0}\t{1}\t{2}".format(guess, fitness, str(timeDiff)))
 
+```
+
+#### Main Body
+
+```python
 random.seed()
 startTime = datetime.datetime.now()
 bestParent = generate_parent(len(target))
@@ -88,7 +96,9 @@ while True:
     bestFitness = childFitness
     bestParent = child
 ```
+
 #### Result:
+
 ```output
 PwYXVxqghGja	0	0:00:00.001003
 HwYXVxqghGja	1	0:00:00.001003
