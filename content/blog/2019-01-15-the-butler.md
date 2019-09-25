@@ -7,9 +7,19 @@ tags:
   - SSG
 draft: false
 ---
-For my first post, I decided to do something that every programer learns in any of their programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!". Before we jump into coding; I will give a brief introduction to the genetic algorithm.
+For my first post, I decided to do something that every programer learns in their introductory programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!". Before we jump into coding; let's have a brief introduction to the genetic algorithm.
 
-Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. 
+## What are Genetic Algorithms?
+
+Genetic algorithms are tools that are used to find good sometimes even optimal solutions to problems that have billions of solutions. They were proposed by John Holland, his students and David E. Goldberg. Genetic algorithms encode a potential solution to a chromosome like data structure and apply recombination operations to preserve critical information. The basic principle on which genetic algorithm works reflects the process of natural selection where the fittest individuals are selected from the population for reproduction.
+
+![](/images/ga_1.jpg)
+
+
+## Basic Structure of Genetic Algorithm
+
+
+## Implementation in Python
 
 ```python
 import random 
@@ -62,7 +72,7 @@ while True:
     bestParent = child
 ```
 
-```
+```output
 PwYXVxqghGja	0	0:00:00.001003
 HwYXVxqghGja	1	0:00:00.001003
 HwYXVxqghlja	2	0:00:00.007858
