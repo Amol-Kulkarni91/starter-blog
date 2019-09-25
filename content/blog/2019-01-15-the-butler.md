@@ -23,9 +23,7 @@ The process of natural selection starts with the selection of fittest individual
 ```python
 import random 
 import datetime
-```
 
-```python
 geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!."
 target = "Hello World!"
 ```
