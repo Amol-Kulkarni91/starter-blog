@@ -42,6 +42,8 @@ def generate_parent(length):
 
 #### Fitness Function
 
+The fitness function provides feedback to guide the algorithm towards a solution. In this case, the fitness value is the total number of letters in the same position as that of the target variable.
+
 ```python
 
 def get_fitness(guess):
