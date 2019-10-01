@@ -32,6 +32,7 @@ target = "Hello World!"
 #### Generate Parents
 
 ```python
+# Function to generate random strings from the gene set.
 def generate_parent(length):
     genes = []
     while len(genes) < length:
