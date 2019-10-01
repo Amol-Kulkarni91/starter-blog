@@ -7,7 +7,7 @@ tags:
   - SSG
 draft: false
 ---
-For my first post, I decided to do something that every programer learns in their introductory programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!". Before we jump into coding; let's have a brief introduction to the genetic algorithm.
+For my first post, I have decided to do something that every programer learns in their introductory programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!" for us. Before we jump into coding; let's have a brief introduction to the genetic algorithm.
 
 ## What are Genetic Algorithms?
 
@@ -18,10 +18,12 @@ Genetic algorithms are tools that are used to find good sometimes even optimal s
 The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
 #### Genes
+Genetic algorithm needs a gene set to build upto the target variable. In this particular case, the genset will be the alphabets from a-z in both small and capital letters. Space and exclamation (!) mark are also included. 
 
 ```python
-import random 
-import datetime
+import random  # Imported to generate random samples
+import datetime # Imported to display the time take to arrive at the solution
+
 
 geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!."
 target = "Hello World!"
@@ -66,7 +68,7 @@ This implementation uses an alternate replacement if the randomly selected `newG
 
 #### Monitoring Progress
 
-It's important to monitor progress, so that the algorithm can be stopped if it gets stuck. Having a visual representation of the gene sequence, which may not be the literal gene sequence, is often critical to identifying what works and what does not so that the algorithm can be improved.
+It's important to monitor progress so that the algorithm can be stopped if it gets stuck. Having a visual representation of the gene sequence, which may not be the literal gene sequence, is often critical to identifying what works and what does not so that the algorithm can be improved.
 
 ```python
 def display(guess):
