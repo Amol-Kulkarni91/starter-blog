@@ -18,7 +18,7 @@ Genetic algorithms are tools that are used to find good sometimes even optimal s
 The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
 #### Genes
-Genetic algorithm needs a gene set to build upto the target variable. In this particular case, the genset will be the alphabets from a-z in both small and capital letters. Space and exclamation (!) mark are also included. 
+Genetic algorithm needs a gene set to build upto the target variable. In this particular case, the genset will be the alphabets from a-z in both cases. Space, period, and exclamation (!) symbol are also included. 
 
 ```python
 import random  # Imported to generate random samples
@@ -45,6 +45,7 @@ def generate_parent(length):
 The fitness function provides feedback to guide the algorithm towards a solution. In this case, the fitness value is the total number of letters in the same position as that of the target variable.
 
 ```python
+# Function that adds 1 incase the letters in guess and target match in position and case.
 def get_fitness(guess):
     return sum(1 for expected, actual in zip(target, guess) if expected == actual)
 ```
