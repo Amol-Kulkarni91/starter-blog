@@ -104,6 +104,8 @@ The main program begins by initializing `bestParent` to a random sequence of let
 - compares fitness to that of the best random string, and
 - keeps the string with better fitness
 
+This cycle repeats until a stop condition occurs, in this case when all the letters in the guess match those in the target.
+
 ```python
 # To reproduce the same result, we call the random.seed function.
 random.seed(1)
