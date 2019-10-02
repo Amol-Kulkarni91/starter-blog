@@ -21,8 +21,8 @@ The process of natural selection starts with the selection of fittest individual
 Genetic algorithm needs a gene set to build upto the target variable. In this particular case, the genset will be the alphabets from a-z in both cases. Space, period, and exclamation (!) symbol are also included. 
 
 ```python
-import random  # Imported to generate random samples
-import datetime # Imported to display the time take to arrive at the solution
+import random  # To generate random samples
+import datetime # To display the time taken to arrive at the solution
 
 
 geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!."
@@ -32,11 +32,25 @@ target = "Hello World!"
 #### Generate Parents
 
 ```python
-# Function to generate random strings from the gene set.
+# Function to generate random strings from the gene set. 
+# It takes in length as a parameter and returns the list of strings.
+
 def generate_parent(length):
-    genes = []
+    genes = []               # Empty list to add the generated parents
+
+# Run the loop until length of the genes list is less than the specified
+# length parameter
+
     while len(genes) < length:
+
+# Select the minimum of (length - len(genes)) and len(geneSet) 
+# and assign it to sampleSize 
+
         sampleSize = min(length - len(genes), len(geneSet))
+
+# random.sample returns a list of strings from geneSet equal to
+# length of sample size. Add the elements to the empty list.
+  
         genes.extend(random.sample(geneSet, sampleSize))
     return ''.join(genes)
 ```
@@ -46,7 +60,9 @@ def generate_parent(length):
 The fitness function provides feedback to guide the algorithm towards a solution. In this case, the fitness value is the total number of letters in the same position as that of the target variable.
 
 ```python
-# Function that adds 1 incase the letters in guess and target match in position and case.
+# Function that adds 1 incase the letters in guess and target match in 
+# position and case.
+
 def get_fitness(guess):
     return sum(1 for expected, actual in zip(target, guess) if expected == actual)
 ```
@@ -55,7 +71,7 @@ def get_fitness(guess):
 
 In certain new offspring formed, some of their genes can be subjected to a mutation with a low random probability. This implies that some of the bits in the bit string can be flipped. Mutation occurs to maintain diversity within the population and prevent premature convergence.
 
-The following implementation converts the parent string to ann array with `list(parent)`, then replaces 1 letter in the array with a randomly selected one from `geneSet` and finally recombines the result into a string with `''.join(childGenes)`
+The following implementation converts the parent string to an array with `list(parent)`, then replaces 1 letter in the array with a randomly selected one from `geneSet` and finally recombines the result into a string with `''.join(childGenes)`
 
 ```python
 def mutate(parent):
@@ -81,14 +97,22 @@ def display(guess):
 ```
 
 #### Main Body
+The main program begins by initializing `bestParent` to a random sequence of letters and calling the display function. The heart of the genetic algorithm is a loop that:
+
+- generates a random string of letters
+- requests the fitness for that random string, then
+- compares fitness to that of the best random string, and
+- keeps the string with better fitness
 
 ```python
-random.seed()
-startTime = datetime.datetime.now()
-bestParent = generate_parent(len(target))
+# To reproduce the same result, we call the random.seed function.
+random.seed(1)
+startTime = datetime.datetime.now() # Record the start time
+bestParent = generate_parent(len(target)) 
 bestFitness = get_fitness(bestParent)
 display(bestParent)
-    
+
+
 while True:
     child = mutate(bestParent)
     childFitness = get_fitness(child)
