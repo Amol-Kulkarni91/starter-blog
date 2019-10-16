@@ -1,12 +1,12 @@
 title: Lost In Data
-baseline: You
+baseline: Fun with data
 description: A generic blog on everything related to Data Science
 baseurl: /
 canonicalurl: false
 theme: hyde
 date:
   format: j F Y
-  timezone: Europe/Paris
+  timezone: EST
 pagination:
   max: 5
   path: page
