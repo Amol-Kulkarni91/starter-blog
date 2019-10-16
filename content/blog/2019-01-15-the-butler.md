@@ -17,7 +17,12 @@ Genetic algorithms are tools that are used to find good sometimes even optimal s
 
 The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
+Genetic algorithms vary in their structure based on their purpose, but all of them share a few common components. The algorithm begins with initializing a population of individuals using default random values. Then, it runs each member of that population through a fitness function.
+
+![](/images/flow.jpg)
+
 #### Genes
+
 Genetic algorithm needs a gene set to build upto the target variable. In this particular case, the genset will be the alphabets from a-z in both cases. Space, period, and exclamation (!) symbol are also included. 
 
 ```python
@@ -93,16 +98,16 @@ def display(guess):
     timeDiff = datetime.datetime.now() - startTime
     fitness = get_fitness(guess)
     print("{0}\t{1}\t{2}".format(guess, fitness, str(timeDiff)))
-
 ```
 
 #### Main Body
+
 The main program begins by initializing `bestParent` to a random sequence of letters and calling the display function. The heart of the genetic algorithm is a loop that:
 
-- generates a random string of letters
-- requests the fitness for that random string, then
-- compares fitness to that of the best random string, and
-- keeps the string with better fitness
+* generates a random string of letters
+* requests the fitness for that guess, then
+* compares fitness to that of the best guess, and
+* keeps the guess with better fitness
 
 This cycle repeats until a stop condition occurs, in this case when all the letters in the guess match those in the target.
 
