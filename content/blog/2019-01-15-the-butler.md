@@ -17,9 +17,9 @@ Genetic algorithms are tools that are used to find good sometimes even optimal s
 
 The process of natural selection starts with the selection of fittest individuals from a population. They produce offspring which inherit the characteristics of the parents and will be added to the next generation. If parents have better fitness, their offspring will be better than parents and have a better chance at surviving. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
-Genetic algorithms vary in their structure based on their purpose, but all of them share a few common components. The algorithm begins with initializing a population of individuals using default random values. Then, it runs each member of that population through a fitness function.
-
 ![](/images/flow.jpg)
+
+Genetic algorithms vary in their structure based on their purpose, but all of them share a few common components. The algorithm begins with initializing a population of individuals using default random values. Then, it runs each member of that population through a fitness function. Then the fittest member of the population is selected to reproduce, then the evaluations and reproduction process are repeated until the termination condition is realized. At termination, the algorithm presents a best member of the population. 
 
 #### Genes
 
@@ -35,6 +35,7 @@ target = "Hello World!"
 ```
 
 #### Generate Parents
+Although, the section is titled "Generate Parents" we are essentially initializing a population.
 
 ```python
 # Function to generate random strings from the gene set. 
