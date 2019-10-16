@@ -2,7 +2,7 @@ title: Lost In Data
 baseline: Fun with data
 description: A generic blog on everything related to Data Science
 baseurl: /
-canonicalurl: false
+canonicalurl: true
 theme: hyde
 date:
   format: j F Y
