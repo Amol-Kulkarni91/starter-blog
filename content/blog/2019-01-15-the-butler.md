@@ -1,7 +1,7 @@
 ---
 title: Hello World!
 date: 2019-10-16T02:13:00.000Z
-image: /images/hello_world.jpeg
+image: ''
 tags:
   - Cecil
   - SSG
