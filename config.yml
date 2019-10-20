@@ -1,7 +1,7 @@
 title: Lost In Data
 baseline: Navigating the world of data science
 description: A generic blog on everything related to Data Science
-baseurl: /
+baseurl: /blog
 canonicalurl: true
 theme: hyde
 date:
