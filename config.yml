@@ -7,6 +7,9 @@ theme: hyde
 date:
   format: j F Y
   timezone: EST
+author:
+  name:  Amol Kulkarni
+  email: amolkulkarni@psu.edu
 pagination:
   max: 5
   path: page
