@@ -1,15 +1,9 @@
-backend:
-  name: git-gateway
-  branch: master
 title: Lost In Data
 baseline: Navigating the world of data science
 description: A generic blog on everything related to Data Science
-baseurl: /
+baseurl: /my-data-blog
 canonicalurl: true
 theme: hyde
-author:
-  name: Amol Kulkarni
-  email: amolkulkarni@psu.edu
 date:
   format: j F Y
   timezone: EST
