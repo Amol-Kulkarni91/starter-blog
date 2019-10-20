@@ -7,6 +7,8 @@ tags:
   - SSG
 draft: false
 ---
+![](/images/hello_world.jpeg)
+
 For my first post, I have decided to do something that every programer learns in their introductory programming course. That's right; this is going to be a post on writing a 'Hello World!' program in python. However, writing such a program in python barely takes 10 seconds depending on your typing speed instead let's write an evolutionary algorithm that will spell out "Hello World!" for us. Before we jump into coding; let's have a brief introduction to the genetic algorithm.
 
 ## What are Genetic Algorithms?
@@ -35,6 +37,7 @@ target = "Hello World!"
 ```
 
 #### Generate Parents
+
 Although, the section is titled "Generate Parents" we are essentially initializing a population.
 
 ```python
